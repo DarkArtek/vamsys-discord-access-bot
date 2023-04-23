@@ -1,5 +1,5 @@
 # vAMSYS Discord Access Bot
-This bot is specifically designed for handling Discord access requests from vAMSYS virtual airlines.
+This bot is specifically designed for handling Discord access requests for vAMSYS virtual airlines.
 
 ## Configuration
 In order to configure this bot, edit the conf.jsonc file located in the main directory
