@@ -1,0 +1,15 @@
+{
+  "airlineID": "", // prefix for pilot ID usernames in the server
+  "vamsysKey": "", // eg. abcdefgh-ijkl-mnop-qrst-uvwxyz012345
+  "discordToken": "", // Discord bot token
+  "servers": {
+    "012345678901234567": { // set to the guild ID (server id)
+      "accessRoleId": ["012345678901234567"], // Rrole that should be assigned to users that have requested access - comma separate roles for multiple roles to be assigned (eg. ["012345678901234567", "765432109876543210"])
+      "nickSeparator": " - ", // Separator that should be used between the name and pilot ID in nicknames
+      "roleRemoval": { // Configuration of the removal of role(s) when a pilot joins a server
+        "enabled": true, // Set this to true if a role needs to be removed when a user is given access to the server, and false if not
+        "roleId": ["012345678901234567"] // If role removal is enabled above, set this to the the role(s) that need to be removed when a user is given access; comma separate roles for multiple roles to be removed (eg. ["012345678901234567", "765432109876543210"])
+      }
+    }
+  }
+}
