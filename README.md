@@ -29,6 +29,10 @@ Node "lts" it's required in order to install.
 ## Need Help?
 This bot it's under MIT license.
 
-I am not affiliated with vAMSYS in any way. Originally created for ITA Airways Virtual and Volotea Virtual hosted on vAMSYS that simulates the real world operations of these Airlines.
+I am not affiliated with vAMSYS in any way.
+
+Originally created for ITA Airways Virtual and Volotea Virtual
+
+These 2 virtual airlines are hosted on vAMSYS that simulates the real world operations of these Airlines.
 
 For any assistance with configuring the bot, or any other queries at all, please contact [luca@ahd-creative.agency](mailto:luca@ahd-creative.agency).
