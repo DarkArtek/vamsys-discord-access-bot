@@ -2,7 +2,7 @@
 This bot is specifically designed for handling Discord access requests for vAMSYS virtual airlines.
 
 ## Configuration
-In order to configure this bot, edit the conf.jsonc file located in the main directory
+In order to configure this bot, edit the [conf.jsonc](conf.jsonc) file located in the main directory
 
 ```json5
 {
