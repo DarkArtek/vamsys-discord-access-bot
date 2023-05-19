@@ -31,6 +31,9 @@ This bot it's under MIT license.
 
 I am not affiliated with vAMSYS in any way.
 
+## Where to find the API Key needed
+If you have access to orwell, please click to Statistics JSON and check the URL. the part after /statistics/ it's your Key
+
 Originally created for ITA Airways Virtual and Volotea Virtual
 
 These 2 virtual airlines are hosted on vAMSYS that simulates the real world operations of these Airlines.
