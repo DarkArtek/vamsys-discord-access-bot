@@ -1,5 +1,6 @@
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
-const accessRequestModal = require('../modal/AccessModal').data;
+
+const accessRequestModal = require('../modals/AccessModal').data;
 
 module.exports = {
   data: new ActionRowBuilder()
@@ -7,12 +8,12 @@ module.exports = {
       new ButtonBuilder()
         .setCustomId('activate-modal')
         .setLabel('Request Access')
-        .setStyle(ButtonStyle.Primary),
+        .setStyle(ButtonStyle.Success)
     ),
   async execute(interaction) {
     const modalToDisplay = accessRequestModal;
-    modalToDisplay.setTitle(`Request access to ${interaction.guild.name}`);
+    modalToDisplay.setTitle(`Request access`)
 
-    interaction.showModal(accessRequestModal);
-  },
-};
+    interaction.showModal(accessRequestModal)
+  }
+}
