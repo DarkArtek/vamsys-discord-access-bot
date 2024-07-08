@@ -1,0 +1,15 @@
+{
+    "airlineId": "ITY",
+    "vamsysKey": "",
+    "discordToken": "",
+    "servers": {
+      "980392489020182538": { 
+        "accessRoleId": ["",""], 
+        "nickSeparator": " - ",
+        "roleRemoval": {
+          "enabled": true,
+          "roleId": [""]
+        }
+      }
+    }
+  }
