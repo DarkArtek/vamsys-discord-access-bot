@@ -209,3 +209,6 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+release.config.js
+types.js
+commit-transform.js
