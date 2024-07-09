@@ -55,11 +55,32 @@ const ACCESS_REQUEST_MODAL = {
       }
 
       const nickname = userResponse.sanitisedName;
+			let nicknameformat;
+			let firstname;
+			let lastname;
+			
+			switch (NICK_FORMAT) {
+			  case 'FULL':
+			    nicknameformat = nickname;
+			    break;
+			  case 'FIRST':
+					namesplit = nickname.split(" ");
+					nicknameformat = namesplit[0];
+					break;
+			  case 'HALF':
+			    namesplit = nickname.split(" ");
+					firstname = namesplit[0];
+					lastname = namesplit[1];
+					nicknameformat = firstname + " " + lastname.charAt(0) + ".";
+			    break;
+			  default:
+			    nicknameformat = nickname;
+			}
 
       const serverConfiguration = interaction.client.getServerConfiguration(interaction.guildId);
       const separator = serverConfiguration.nickSeparator
 
-      await interaction.member.setNickname(`${nickname}${separator}${pilotId}`);
+      await interaction.member.setNickname(`${nicknameformat}${separator}${pilotId}`);
 
       const roleRemovalEnabled = serverConfiguration.roleRemoval.enabled;
 
