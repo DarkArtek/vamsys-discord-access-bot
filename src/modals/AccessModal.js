@@ -1,5 +1,6 @@
 const { ModalBuilder, ActionRowBuilder, TextInputBuilder, TextInputStyle } = require('discord.js');
 const { AIRLINE_ID } = require('../constants/configuration');
+const { NICK_FORMAT } = require('../constants/configuration');
 
 const ModalResponse = require("../structures/ModalResponse");
 const VamsysUser = require("../structures/VamsysUser");
