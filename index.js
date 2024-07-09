@@ -1,3 +1,4 @@
+Object.keys(require.cache).forEach(function(key) { delete require.cache[key] })
 const DiscordBot = require('./src');
 const { DISCORD_TOKEN, BOT_SERVERS, NICK_FORMAT } = require('./src/constants/configuration');
 
