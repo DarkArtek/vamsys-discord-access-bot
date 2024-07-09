@@ -15,10 +15,13 @@ const AIRLINE_ID = configFile.airlineId;
 // Nickname Format from the config.json file
 const NICK_FORMAT = configFile.nickFormat;
 
+const TEST = "TEST";
+
 module.exports = {
   VAMSYS_API_KEY,
   DISCORD_TOKEN,
   BOT_SERVERS,
   AIRLINE_ID,
 	NICK_FORMAT,
+	TEST,
 }
