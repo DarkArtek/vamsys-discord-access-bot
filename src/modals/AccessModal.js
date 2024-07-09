@@ -4,8 +4,6 @@ const { AIRLINE_ID, NICK_FORMAT } = require('../constants/configuration');
 const ModalResponse = require("../structures/ModalResponse");
 const VamsysUser = require("../structures/VamsysUser");
 
-const NICK_FORMAT = "HALF";
-
 /**
  * Create input row for the pilot ID
  */
