@@ -6,7 +6,7 @@
       "980392489020182538": { 
         "accessRoleId": ["",""], 
         "nickSeparator": " - ",
-				"nickFormat": "FULL",
+        "nickFormat": "FULL",
         "roleRemoval": {
           "enabled": true,
           "roleId": [""]
