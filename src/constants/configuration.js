@@ -13,7 +13,8 @@ const BOT_SERVERS = configFile.servers;
 const AIRLINE_ID = configFile.airlineId;
 
 // Nickname Format from the config.json file
-const NICK_FORMAT = configFile.nickFormat;
+//const NICK_FORMAT = configFile.nickFormat;
+const NICK_FORMAT = "HALF";
 
 module.exports = {
   VAMSYS_API_KEY,
