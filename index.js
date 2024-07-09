@@ -1,7 +1,7 @@
 const DiscordBot = require('./src');
 const { DISCORD_TOKEN, BOT_SERVERS, NICK_FORMAT } = require('./src/constants/configuration');
 
-var configFile = require('../../config/config.json');
+var configFile = require('./config/config.json');
 
 async function start() {
   try {
