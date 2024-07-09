@@ -58,23 +58,30 @@ const ACCESS_REQUEST_MODAL = {
 			let nicknameformat;
 			let firstname;
 			let lastname;
+
+			console.log(`Nickname Format ${NICK_FORMAT}`);
 			
 			switch (NICK_FORMAT) {
 			  case 'FULL':
 			    nicknameformat = nickname;
+					console.log(`Nickname Format ${nicknameformat}`);
 			    break;
 			  case 'FIRST':
 					namesplit = nickname.split(" ");
 					nicknameformat = namesplit[0];
+					console.log(`Nickname Format ${nicknameformat}`);
 					break;
 			  case 'HALF':
 			    namesplit = nickname.split(" ");
 					firstname = namesplit[0];
 					lastname = namesplit[1];
 					nicknameformat = firstname + " " + lastname.charAt(0) + ".";
+					console.log(`Nickname Format ${nicknameformat}`);
 			    break;
 			  default:
 			    nicknameformat = nickname;
+					console.log(`Nickname Format ${nicknameformat}`);
+					break;
 			}
 
       const serverConfiguration = interaction.client.getServerConfiguration(interaction.guildId);
