@@ -1,5 +1,3 @@
-const { NICK_FORMAT } = require('../constants/configuration');
-
 class ModalResponse {
     #pilotId;
     #name;
