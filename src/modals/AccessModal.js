@@ -8,37 +8,37 @@ const VamsysUser = require("../structures/VamsysUser");
  * Create input row for the pilot ID
  */
 const pilotIdRow = new ActionRowBuilder()
-  .addComponents(
-    new TextInputBuilder()
-      .setCustomId('pilot-id')
-      .setLabel('Pilot ID')
-      .setStyle(TextInputStyle.Short)
-      .setMinLength(7)
-      .setMaxLength(8)
-      .setPlaceholder(`${AIRLINE_ID}0001`)
-      .setRequired(true),
-  )
+    .addComponents(
+        new TextInputBuilder()
+            .setCustomId('pilot-id')
+            .setLabel('Pilot ID')
+            .setStyle(TextInputStyle.Short)
+            .setMinLength(7)
+            .setMaxLength(8)
+            .setPlaceholder(`${AIRLINE_ID}0001`)
+            .setRequired(true),
+    )
 
 /**
  * Create input row for the name
  */
 const nameRow = new ActionRowBuilder()
-  .addComponents(
-    new TextInputBuilder()
-    .setCustomId('name')
-    .setLabel('Name')
-    .setStyle(TextInputStyle.Short)
-    .setPlaceholder('Barry Allen')
-    .setRequired(true)
-  )
+    .addComponents(
+        new TextInputBuilder()
+            .setCustomId('name')
+            .setLabel('Name')
+            .setStyle(TextInputStyle.Short)
+            .setPlaceholder('Barry Scott')
+            .setRequired(true)
+    )
 
 const ACCESS_REQUEST_MODAL = {
- data: new ModalBuilder()
-  .setCustomId('access-form')
-  .addComponents([
-    pilotIdRow,
-    nameRow
-  ]),
+  data: new ModalBuilder()
+      .setCustomId('access-form')
+      .addComponents([
+        pilotIdRow,
+        nameRow
+      ]),
   async execute(interaction) {
     try {
       await interaction.deferReply({ ephemeral: true });
