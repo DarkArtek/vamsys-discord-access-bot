@@ -1,5 +1,5 @@
 const { ModalBuilder, ActionRowBuilder, TextInputBuilder, TextInputStyle } = require('discord.js');
-const { AIRLINE_ID } = require('../constants/configuration');
+const { AIRLINE_ID, NICK_FORMAT } = require('../constants/configuration');
 
 const ModalResponse = require("../structures/ModalResponse");
 const VamsysUser = require("../structures/VamsysUser");
@@ -54,11 +54,39 @@ const ACCESS_REQUEST_MODAL = {
       }
 
       const nickname = userResponse.sanitisedName;
+			let nicknameformat;
+			let firstname;
+			let lastname;
+
+			console.log(`Nickname Format ${NICK_FORMAT}`);
+			
+			switch (NICK_FORMAT) {
+			  case 'FULL':
+			    nicknameformat = nickname;
+					console.log(`Nickname Format ${nicknameformat}`);
+			    break;
+			  case 'FIRST':
+					namesplit = nickname.split(" ");
+					nicknameformat = namesplit[0];
+					console.log(`Nickname Format ${nicknameformat}`);
+					break;
+			  case 'HALF':
+			    namesplit = nickname.split(" ");
+					firstname = namesplit[0];
+					lastname = namesplit[1];
+					nicknameformat = firstname + " " + lastname.charAt(0) + ".";
+					console.log(`Nickname Format ${nicknameformat}`);
+			    break;
+			  default:
+			    nicknameformat = nickname;
+					console.log(`Nickname Format ${nicknameformat}`);
+					break;
+			}
 
       const serverConfiguration = interaction.client.getServerConfiguration(interaction.guildId);
       const separator = serverConfiguration.nickSeparator
 
-      await interaction.member.setNickname(`${nickname}${separator}${pilotId}`);
+      await interaction.member.setNickname(`${nicknameformat}${separator}${pilotId}`);
 
       const roleRemovalEnabled = serverConfiguration.roleRemoval.enabled;
 

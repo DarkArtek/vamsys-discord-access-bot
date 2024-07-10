@@ -6,6 +6,7 @@
       "": { 
         "accessRoleId": ["",""], 
         "nickSeparator": " - ",
+        "nickFormat": "FULL",
         "roleRemoval": {
           "enabled": true,
           "roleId": [""]
