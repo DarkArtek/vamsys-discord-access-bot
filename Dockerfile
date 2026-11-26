@@ -1,4 +1,4 @@
-FROM node:lts-bookworm-slim
+FROM node:lts-bookworm-slim@sha256:0042e17d232a87a2cd485be1da7900fca4d10a4ad11b29e9285da1d2e54798c9
 WORKDIR /app
 COPY ["package.json", "package-lock.json*", "./"]
 RUN npm install --production --omit-dev
